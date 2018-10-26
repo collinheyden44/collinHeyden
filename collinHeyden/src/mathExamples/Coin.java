@@ -20,13 +20,13 @@ public class Coin {
         dime = ((amount%100)%25)/10;
         nickel = (((amount%100)%25)%10)/5;
         penny = ((((amount%100)%25)%10)%5)/1;
-        
         System.out.println(doller + " Dollers");
         System.out.println(quarter + " Quarters");
         System.out.println(dime + " Dimes");
         System.out.println(nickel+ " Nickels");
         System.out.println(penny + " Pennies");
         input.close();
+        
 	}
 
 }
@@ -38,6 +38,7 @@ public class Coin {
         
         
 
+        
         
         
         
