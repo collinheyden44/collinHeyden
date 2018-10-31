@@ -7,29 +7,27 @@ public class Promotion {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		double close = .1;
-		boolean promotion = true;
+		boolean promotion = false;
 		System.out.println("How old are you?");
 		int age = input.nextInt();
 		System.out.println("How many years of experience do you have?");
 		double experience = input.nextDouble();
 		System.out.println("What is your height (in inches)?");
 		int height = input.nextInt();
-		
-		if(age >= 50) {
-			if(experience - Math.abs(10.5) < close) {
+
+		if (age >= 50) {
+			if (experience - Math.abs(10.5) < close) {
 				if (height > 80 || height < 70) {
 					promotion = true;
 				}
 			}
-		}
-		else {
-			if(height > 70 && height < 80) {
-			promotion = false;
+		} else {
+			if (height > 70 && height < 80) {
+				promotion = false;
 			}
 		}
-		
-		System.out.println("YYou get a promotion: " + promotion);
 
+		System.out.println("You get a promotion: " + promotion);
 
 	}
 
