@@ -13,6 +13,7 @@ public class ActivityEight {
 		int count = 0;
 		System.out.println("Please enter double values (ex. 3.2) that you want to find the average for");
 		System.out.println("When you are done, please type 1");
+		
 		System.out.println("Double #: ");
 		double num = input.nextDouble();
 		
