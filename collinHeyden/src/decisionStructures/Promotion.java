@@ -23,11 +23,13 @@ public class Promotion {
 			}
 		} else {
 			if (height > 70 && height < 80) {
-				promotion = false;
+				promotion = true;
 			}
 		}
 
 		System.out.println("You get a promotion: " + promotion);
+		
+		input.close();
 
 	}
 
