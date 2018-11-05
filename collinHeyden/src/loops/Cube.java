@@ -17,6 +17,7 @@ public class Cube {
 		}
 		
 		System.out.println("Sorry, we cannot process -1" + "\n" + "* Program ended *");
+		input.close();
 
 	}
 
