@@ -12,11 +12,12 @@ public class Activ2 {
 		
 		do {
 			System.out.println("Magic Number: " + Math.pow(num, 5));
-			System.out.println("Please enter a Number.class (9999 to quit)");
+			System.out.println("Please enter a Number (9999 to quit)");
 			num = input.nextInt();
 		}
 		while(num != 9999);
 
+		input.close();
 	}
 
 }
