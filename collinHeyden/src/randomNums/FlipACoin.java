@@ -10,7 +10,7 @@ public class FlipACoin {
 		
 		
 		int heads = 0;
-		double headsMax = 0.01;
+		double headsMax = 0.0;
 		double headsMin = 1.00;
 		
 		
