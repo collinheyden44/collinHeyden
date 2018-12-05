@@ -2,46 +2,46 @@ package strings;
 
 public class Essay {
 	
-	private String authorsName;
-	private String essayText;
-	
-	public Essay() {
-		
-		authorsName = "Heyden, Collin";
-		essayText = "My essay.";
-		
+	private String name;
+	private String text;
+	public Essay(){
+		name = "Heyden, Collin";
+		text = "Essay text here";
 	}
 	
-	public Essay(String newAuthorName, String newEssayText) {
-		
-		authorsName = newAuthorName;
-		essayText = newEssayText;
-		
+	public void setName(String newName) {
+	  name = newName;
 	}
 	
-	public void setAuthorsName(String newAuthorName) {
-		
-		authorsName = newAuthorName;
-
+	public void setText(String newText) {
+	  text = newText;
 	}
 	
-	public void setEssayText(String newEssayText) {
-		
-		essayText = newEssayText;
-		
+	public String lastName() {
+	  String last = name.substring(name.indexOf(" ") + 1);
+	  return last.toUpperCase();
 	}
 	
-	public String returnAuthorCapital() {
-		
-		for(int i = 0; i <= authorsName.length(); i++) {
-
-			if (authorsName.substring(i).startsWith(",")) {
-				
-				return authorsName;
-				
+	public int firstName(){
+	  String first = name.substring(0, name.indexOf(" "));
+	  return first.length();
+	}
+	
+	public boolean authorNameContainsX() {
+	  return name.toLowerCase().contains("x");
+	}
+	
+	public int numberOfWords() {
+		int words = 1;
+		for(int j = 0; j < text.length(); j++){
+			if(text.charAt(j) == ' ') {
+				words++;
 			}
 		
-		}		
+		}
+		
+		return words;
+	  
 	}
 
 }
