@@ -11,21 +11,24 @@ public class Password {
 	}
 
 	public boolean setPassword() {
-		
-		System.out.println("New Password");
-		String newPassword = input.nextLine();
-		
-		
+		String newPassword;
 		boolean passwordWorks = false;
 		
-		while(passwordWorks == false) {
-			if(newPassword.contains("!") && newPassword.contains("?") && !newPassword.contains(" ") && newPassword.length() >= 7 && newPassword.length() <= 22 && newPassword.charAt(0) >= 0 && newPassword.charAt(0) <= 9) {
+		do {
+			System.out.println("Please type a new password 	*(Must include \"?\" and \"!\")*");
+			System.out.println("				*(Must be at least 7 characters long and at most 22 characters long)*");
+			System.out.println("				*(The fist letter of your password must be a digit 1-9)*");
+			System.out.println("				*(Must not include spaces)*");
+			newPassword = input.nextLine();
+			
+			if(newPassword.contains("!") && newPassword.contains("?") && !newPassword.contains(" ") && newPassword.length() >= 7 && newPassword.length() <= 22 && Character.isDigit(newPassword.charAt(0))) {
 				passwordWorks = true;
 			}
 			else {
 				passwordWorks = false;
 			}
-		}
+		} while(passwordWorks == false);
+		
 		password = newPassword;
 		return passwordWorks;
 	}
