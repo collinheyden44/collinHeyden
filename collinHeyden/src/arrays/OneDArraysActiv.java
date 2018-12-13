@@ -7,6 +7,7 @@ public class OneDArraysActiv {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
+		
 		int numNames = 20;
 		String[] names = new String[numNames];
 		
@@ -18,7 +19,9 @@ public class OneDArraysActiv {
 		for(int j = 20; j >= 0; j--) {
 			System.out.println(names[j]);
 		}
+		
 		input.close();
+	
 	}
 
 }
