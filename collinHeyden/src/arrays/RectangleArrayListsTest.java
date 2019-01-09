@@ -17,14 +17,27 @@ public class RectangleArrayListsTest {
 			rectangle.add(new RectangleArrayLists((min + generator.nextInt(max - min + 1)), (min + generator.nextInt(max - min + 1))));
 		}
 		
-		int maxNum = 0;
-		for(int k = 0; k < rectangle.size(); k++) {
-			if(rectangle.get(k).returnArea() > maxNum) {
-				rectangle.add(0, rectangle.get(k));
+		int minNum = 2500;
+		for(int l = 0; l < rectangle.size(); l++) {
+			if(rectangle.get(l).returnArea() < minNum) {
+				minNum = (int) rectangle.get(l).returnArea();
+				rectangle.add(19, rectangle.get(l)); 
+				rectangle.remove(l);
 			}
 		}
 		
-		System.out.println(rectangle);
+		int maxNum = 0;
+		for(int k = 0; k < rectangle.size(); k++) {
+			if(rectangle.get(k).returnArea() > maxNum) {
+				maxNum = (int) rectangle.get(k).returnArea();
+				rectangle.add(0, rectangle.get(k)); 
+				rectangle.remove(k);
+			}
+		}
+		
+		for(int j = 0; j < rectangle.size(); j++) {
+				System.out.println(rectangle.get(j).returnArea());
+		}
 	
 	}
 
